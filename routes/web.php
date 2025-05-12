@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\LatihanController;
 use App\Http\Controllers\UserDataController;
+use App\Http\Controllers\AnggotaController;
+use App\Models\Anggota;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,7 +18,9 @@ Route::get('gettabel', [LatihanController::class, 'getTabel'])
      ->name('latihan.tabel');
 Route::get('getform', [LatihanController::class, 'getForm'])
      ->name('latihan.form');
-Route::get('/', function () {
-     return redirect()->route('users.index');
-});
-Route::resource('users', UserDataController::class);
+// Route::get('/', function () {
+//      return redirect()->route('users.index');
+// });
+// Route::resource('users', UserDataController::class);
+Route::resource('anggota', AnggotaController::class);
+Route::resource('kategori', AnggotaController::class);

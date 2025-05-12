@@ -18,10 +18,10 @@ class LatihanController extends Controller
         return view('latihan.tabel', compact('mahasiswa'));
     }
 
-    // public function getForm()
-    // {
-    //     return view('latihan.form');
-    // }
+    public function getForm()
+    {
+        return view('latihan.form');
+    }
     public function create()
     {
         return view('form');
